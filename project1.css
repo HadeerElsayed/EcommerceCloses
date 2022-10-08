@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #121212;
+    line-height: 55px;
+}
+.text {
+    font-size: 20px;
+    font-weight: normal;
+    color: #6c6c6c;
+    line-height: 32px;
+    margin-top: 16px;
+}
+html {
+    scroll-behavior: smooth;
+}
+/*--------------------------------Nav Bar---------------------------*/
+.NavBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    background-color: transparent;
+    padding: 30px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+#Logo {
+    font-size: 60px ;
+    position: relative;
+    top: -14px;
+    color: #535Cf1;
+    cursor: pointer;
+}
+.links ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+.NavBar .links ul li {
+    margin: 6px 14px;
+}
+.NavBar .links ul li a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+.NavBar .links ul li a:hover {
+    color: #4f47e4;
+}
+.NavIcons ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+.NavIcons ul li {
+    margin: 0 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.NavIcons ul li a {
+    color: #6c6c6c;
+}
+
+/*-----------------------------Home-----------------------------*/
+.Home {
+    background-image: url("D:\TheStart/3.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 120vh;
+    background-attachment: fixed;
+    position: relative;
+}
+.Home .divWave {
+    background-image: linear-gradient( rgba(232,237,255,0.9) 40%, rgba(254,255,244,0.3) 70% ,rgba(255,255,255,0.12));
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+}
+.waveShape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.waveShape img{
+    width: 100%;
+    height: 120vh;
+    display: block;
+}
+.hometext {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.hometext a {
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0067f4;
+    cursor: pointer;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0,0.16);
+    z-index: 5;
+}
+.hometext li {
+    display: inline-block;
+    margin: 50px 20px 0 0;
+}
+.hometext li a {
+    border-radius: 50px;
+    border: 0;
+}
+.btnVedio i {
+    margin-left: 10px;
+    color:#4f47e4 ;
+}
+.btnVedio {
+    background-color: #fff;
+    box-shadow: 2px 4px 5px 2px #eee;
+}
+.btnOne {
+    width: 100px;
+    height: 8px;
+    background-image: linear-gradient(to right,#535Cf1,#A147e4);
+}
+.one {
+    color: #fff;
+}
+.btnOne:hover {
+    background-image: linear-gradient(to left,#535Cf1,#A147e4);
+}
+/*-----------------------------------services--------------------------------------*/
+.services {
+    background-color: white;
+}
+.serviceHeader {
+    text-align: center;
+    line-height: 28px;
+    margin: 40px 0 0 0;
+}
+.serviceHeader p {
+    color:dimgrey;
+    margin: 10px;
+}
+.allServics{
+    /*display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;*/
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    width: 80%;
+    line-height: 25px;
+    
+}
+.allServics i {
+    font-size: 50px;
+    margin-left: -150px;
+    margin-bottom: 13px;
+    margin-top: 20px;
+    color: #4f47e4;
+}
+.allServics h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: -100px;
+}
+.allServics pre {
+    margin-left: 8px;
+    font-weight: 900;
+    font-size: 14px;
+    color: #6c6c6c;
+}
+.imgServices {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: -230px;
+    margin-right: 40px;
+}
+
+/*-----------------------------------Price------------------------------------*/
+.pricingHeader {
+    text-align: center;
+    line-height: 30px;
+}
+.allCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pricingHeader p {
+    color: dimgrey;
+    margin-bottom: 6rem;
+}
+.Cards {
+    border: 1px solid #eee;
+    border-radius: 20px;
+    margin-left: 60px;
+    width: 355px;
+    height: 100%;
+}
+.Cards h3 {
+    font-size: 40px;
+    text-align: center;
+    background-color: #ecf0f1;
+    font-weight: 300;
+    padding: 40px 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px ;
+    clip-path:polygon(0 0,100% 0, 100% 90%,0 100%);
+}
+.firstPrice {
+    text-align: center;
+    padding: 20px 0;
+}
+.firstPrice .sign {
+    font-size: 45px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+.firstPrice .price {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: -2px;
+    line-height: 60px;
+    vertical-align: middle;
+}
+.firstPrice .pointNum {
+    font-size: 24px;
+    font-weight: 400;
+    vertical-align:bottom;
+}
+.firstPrice .month {
+    font-size: 18px;
+    font-weight: 400;
+    vertical-align:bottom;
+}
+.Cards ul li {
+    border-top: 1px solid #ccc;
+    padding: 22px 0;
+    border-bottom: 1px solid #ccc ;
+    color: #7f8c8d;
+    text-align: center;
+}
+.Cards ul li i {
+    color: #535Cf1;
+    margin-right: 6px;
+}
+.Cards .btnprice {
+    width: 177px;
+    border: 1px solid #2ecc2e;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 50px;
+    margin: 20px 0 20px 80px;
+}
+.standerd h3{
+    background-image: linear-gradient(to right,#535Cf1,#A147e4);
+    position: relative;
+    top: -25px;
+    color: #fff;
+}
+.btnStanderd {
+    background-image: linear-gradient(to right,#535Cf1,#A147e4);
+}
+.btnStanderd a {
+    color:#fff;
+}
+.Third {
+    margin-right: 60px;
+}
+.Cards:hover .btnprice {
+    background-image: linear-gradient(to right,#535Cf1,#A147e4);
+}
+.Cards:hover a {
+    color: #fff;
+}
+.Cards:hover h3 {
+    background-image: linear-gradient(to right,#535Cf1,#A147e4);
+    color: #fff;
+}
+/*-----------------------contact-----------------------*/
+.ContactUs {
+    background-image: linear-gradient(to right,rgba(255,0,0,0),#910AFA),url("D:\TheStart/team.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 150px;
+    background-position: center;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+.ContactUs .mainContact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    line-height: 30px;
+}
+.ContactUs .mainContact h3 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.ContactUs .mainContact p {
+    padding-top: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+.SendEmail {
+    background-color:#fff ;
+    border-radius: 50px;
+    width: 380px;
+    padding: 15px;
+    margin-top: 30px;
+}
+.SendEmail i {
+    margin-right: 20px;
+    color: #A147e4;
+}
+.SendEmail input {
+    border: none;
+    outline: none;
+}
+.SendEmail .submitNow {
+    background-image: linear-gradient(to right,#535Cf1,#A147e4);
+    border-radius: 50px;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+}
+/*----------------Send Data---------------------*/
+.dataText {
+    text-align: center;
+    line-height: 20px;
+}
+.dataText h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+.dataText p {
+    padding-top: 15px;
+    color: #6c6c6c;
+    font-size: 18px;
+    font-weight: 300;
+}
+.fields {
+    margin-left: 150px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    
+}
+.fields input , textarea {
+    width: 400px;
+    padding: 20px;
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+ textarea {
+    width: 980px;
+    height: 200px;
+    margin-left: 150px;
+}
+.SendData {
+    background-image: linear-gradient(to right,#535Cf1,#A147e4);
+    border-radius: 50px;
+    color: #fff;
+    padding: 18px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 150px;
+    position: relative;
+    left: 45%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+}
+/*-----------------------------------Footer----------------------------------*/
+.footer {
+    background-color: rgb(235, 236, 238);
+    height: 450px;
+}
+.HeaderIcon {
+    margin-left: 80px;
+}
+.HeaderIcon ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+}
+.HeaderIcon ul li {
+    margin: 150px 20px 0 0;
+}
+.HeaderIcon ul li i {
+    font-size: 20px;
+    color: #6c6c6c;
+}
+#logoFooter {
+    font-size: 60px;
+    margin-top: -25px;
+    color: #535Cf1;
+}
+.columns {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 80px 0;
+    line-height: 33px;
+    letter-spacing: -.9px;
+   
+}
+.columns h4,p {
+    color: #6c6c6c;
+}
+.columns a {
+    color: #121212;
+}
+.columns p {
+    line-height: 27px;
+} 
+.endCol {
+    background-color: #ccc;
+    border-radius: 50px;
+    width: 280px;
+    margin: 10px 12px 10px 0;
+}
+.endCol input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 15px;
+}
+.endCol i {
+   position: relative;
+   right: -40px;
+}
+/*----------------------The End----------------------------------*/
+.TheEnd {
+    width: 100%;
+    background-color: rgb(13, 61, 75);
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    letter-spacing: -.3 ;
+}
+.EndProj p{
+    color: #fff;
+    font-size: 17px;
+}
+.EndProj span {
+    color: rgb(78, 129, 112);
+}
+.NavBar.scrolled {
+    background-color: #fff ;
+    box-shadow: 7px 10px 15px rgba(0,0,0,0.3);
+}

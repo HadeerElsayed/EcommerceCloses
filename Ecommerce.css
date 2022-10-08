@@ -1,0 +1,862 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, tahoma, sans-serif;
+}
+ul li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+/*=============================Nav Bar==============================*/
+.navBar {
+    width: 100%;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 25px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(231, 236, 240);
+    box-shadow: 7px 15px 10px rgba(0,0,0,0.3);
+    z-index: 1;
+    position: fixed;
+    transition: .2s ease;
+}
+.navBar .links ul{
+    display: flex;
+    flex-direction: row;
+}
+.navBar .links ul li {
+    margin-left: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.navBar .links ul li a {
+    color: #1a1a1a;
+}
+.navBar .links ul li a:hover,
+.navBar .links ul li .active {
+    color:#088178;
+}
+/*************/
+.navBar .links ul li .active::after,
+.navBar .links ul li a:hover:not(.act):after
+{
+    content: "";
+    width: 40%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: -.9px;
+}
+/************/
+.navBar .links ul li .act {
+    color:#088178
+}
+/*===========================Deals===========================*/
+.deals {
+    background-image: url("D:\TheStart/girl.png");
+    background-size: cover;
+    height: 600px;
+}
+.dealsInfo {
+    padding: 180px 0 0 110px;
+}
+.tradep {
+    position: relative;
+    top: 20px;
+}
+.dealsInfo p {
+    font-weight: bold;
+    color: #1a1a1a;
+    font-size: 24px;
+}
+.dealsInfo h1 {
+    font-weight: 900;
+    font-size: 40px;
+}
+.dealsInfo span {
+    color: #088178;
+}
+.dealsInfo h4 {
+    color: #6c6c6c;
+}
+.dealsInfo a {
+    position: relative;
+    left: -160px;
+    top: -20px;
+    color: #088178;
+    font-weight: bold;
+}
+.dealsInfo img {
+    cursor: pointer;
+}
+
+/*========================feature======================*/
+.feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.feature div {
+    border: 1px solid #6c6c6c;
+    border-radius: 3px;
+    padding: 10px;
+}
+.feature div p {
+    text-align: center;
+    padding: 6px;
+    font-weight: bold;
+}
+.feature .fOne p{
+    background-color: rgb(241, 216, 216);
+    color: rgb(144, 170, 204);
+}
+.feature .fTwo p{
+    background-color: rgb(178, 240, 184);
+    color: rgb(111, 167, 111);
+}
+.feature .fThree p{
+    background-color: rgb(185, 231, 240);
+    color: rgb(76, 123, 167);
+}
+.feature .fFour p{
+    background-color: rgb(152, 210, 236);
+    color: rgb(138, 158, 214);
+}
+.feature .fFive p{
+    background-color: rgb(236, 207, 207);
+    color: rgb(126, 154, 233);
+}
+.feature .fSix p{
+    background-color: rgb(209, 198, 224);
+    color: rgb(107, 221, 131);
+}
+/*=====================Feature Priduct========================*/
+.featureProduct .producttitle {
+    text-align: center;
+}
+.featureProduct .producttitle h1 {
+    font-weight: 700;
+    font-size: 44px;
+}
+.featureProduct .producttitle p{
+    color: #6c6c6c;
+    margin-top: -10px;
+    font-weight: 400;
+    letter-spacing: -.5px;
+}
+.products {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin: 10px 0 0  40px;
+    transition: .2s ease;
+}
+.products div:not(.icons) {
+    border: 1px solid #ddd;
+    width: 280px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 30px;
+    height: 400px;
+    cursor: pointer;
+}
+.products img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.products div h4,
+.products div p {
+    text-align: left;
+    padding: 12px;
+}
+.products div p:first-of-type {
+    position: relative;
+    top: -5px;
+    color: #6c6c6c;
+}
+.products div p:last-of-type {
+    color: #088178;
+    margin-top: -8px;
+    font-weight: 800;
+}
+.products div h4 {
+    position: relative;
+    top:-36px;
+    font-weight: bold;
+}
+.products .icons {
+    text-align: left;
+    margin-left: 10px;
+    margin-top: -60px;
+    transition: .2s ease;
+}
+.products .icons i {
+    color: yellow;
+    font-size: 20px;
+}
+.products span {
+    background-color: rgb(194, 240, 202);
+    padding: 12px;
+    border-radius: 50px;
+    color: #088178;
+    font-size: 18px;
+    position: relative;
+    top: -65px;
+    right: -110px;
+    border: 1px solid rgb(148, 236, 148);
+    cursor: pointer;
+}
+.products span:hover {
+    background-color: rgb(6, 46, 34);
+    color: white;
+}
+.products div:not(.icons):hover {
+    box-shadow: 10px 15px 20px #ddd;
+}
+.products div:hover h4 {
+    color: #088178;
+}
+/*======================services=============================*/
+.Homeservice {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background-image: url("D:\TheStart/banner/b2.jpg");
+    height: 300px;
+}
+.Homeservice .mainService {
+    position: relative;
+    top: 50px;
+}
+.Homeservice .mainService h3 {
+    text-align: center;
+    margin-bottom: -25px;
+    color: white;
+}
+.Homeservice .mainService p{
+    font-weight: bold;
+    font-size: 33px;
+    color: white;
+}
+.Homeservice .mainService button {
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 4px;
+    position: relative;
+    left: 280px;
+    width: 160px;
+    font-weight: 800;
+    font-size: 12px;
+    background-color: white;
+    transition: .2s ease;
+}
+.Homeservice .mainService button:hover {
+    background-color: #088178;
+    color: white;
+}
+.Homeservice .mainService span {
+    color: brown;
+    font-size: 38px;
+    font-weight: 900;
+}
+/*============================*/
+.somePhoto {
+    display: flex;
+    flex-direction: row;
+    margin: 0 40px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.first {
+    background-image: url("D:\TheStart/banner/b17.jpg");
+    background-size: cover;
+    padding: 30px;
+    margin-right: 40px;
+    width: 600px;
+    height: 300px;
+}
+.first p:first-of-type {
+    margin-top: 35px;
+}
+.first p:first-of-type,
+.scend p:first-of-type {
+    color: #fff;
+    font-size: 18px;
+}
+.first p:last-of-type,
+.scend p:last-of-type {
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: -1;
+    margin-top: -30px;
+}
+.scend {
+    background-image: url("D:\TheStart/banner/b10.jpg");
+    background-size: cover;
+    padding: 60px;
+    width: 600px;
+    height: 300px;
+}
+.first h3,
+.scend h3 {
+    color: transparent;
+    font-size: 28px;
+    font-weight: 900;
+    margin-top: -40px;
+}
+.first button ,
+.scend button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 150px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.first:hover button ,
+.scend:hover button {
+    background-color: #088178;
+    border: none;
+}
+.Photos {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    justify-items: center;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+.Photos div {
+    margin: -20px 20px 0 0;
+    padding: 12px;
+    height: 200px;
+}
+.Photos .firstPh {
+    background-image: url("D:\TheStart/banner/b7.jpg");
+    background-size: cover;
+    width: 400px;
+    
+}
+.Photos .secondPh {
+    background-image: url("D:\TheStart/banner/b4.jpg");
+    background-size: cover;
+    width: 400px;
+}
+.Photos .thirdPh {
+    background-image: url("D:\TheStart/banner/b18.jpg");
+    background-size: cover;
+    width: 400px;
+}
+.Photos .title {
+    text-align: left;
+    margin-top: 30px;
+} 
+.Photos .title h2 {
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+    
+}
+.Photos .title p {
+    color: brown;
+    font-weight: 900;
+}
+/*====================sign up====================*/
+.signUp {
+    background-image: url("D:\TheStart/about/banner.png");
+    background-size: cover;
+    padding: 14px;
+    color: #fff;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.signUp .info {
+    margin-left: 40px;
+}
+.signUp .forms {
+    margin-right: 40px;
+}
+.signUp .forms input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 3px;
+}
+.signUp .forms .mail {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.signUp .forms .send{
+    background-color: #088178;
+    color: #fff;
+    margin-left: -5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.signUp .info p{
+    color: wheat;
+    font-weight: 900;
+}
+.signUp .info p span {
+    color: rgb(199, 166, 18);
+}
+/*===========================footer==========================*/
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    top: 40px;
+    line-height: 28px;
+}
+.footer p,
+.footer h4,
+.footer .colum1 img {
+    margin-left: 40px;
+}
+.footer .colum4 .imge {
+    border: 1px solid greenyellow;
+    border-radius: 5px;
+}
+.footer ul li {
+    color: #6c6c6c;
+    cursor: pointer;
+}
+.footer .colum4 p {
+    color: #6c6c6c;
+}
+.footer .vivs {
+    margin-left: 40px;
+}
+.end {
+    margin-left: 110px;
+    margin-top: -30px;
+}
+.end ul {
+    display: flex;
+    flex-direction: row;
+}
+.end ul li {
+    margin: 0 10px;
+}
+.end .endIcons {
+    margin-left: -50px;
+}
+.end .endIcons i {
+    color: #6c6c6c;
+}
+.copyWrite {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    color: #6c6c6c;
+}
+.copyWrite i {
+    margin-right: 5px;
+}
+
+
+/*======================================================Shop=============================================*/
+.stay {
+    background-image: url("D:\TheStart/banner/b1.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    color: #fff;
+    width: 100%;
+    height: 300px;
+    line-height: 5px;
+}
+.stay h2 {
+    font-weight: 900;
+    font-size: 30px;
+}
+/*====================Number=======================*/
+.oneTwoarrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+.oneTwoarrow a {
+    margin: 0 5px;
+    width: 70px;
+    background-color: #088178;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+/*===================Clicked Image=======================*/
+.clickedImg .leftSide {
+    width: 60%;
+    margin: 0 70px;
+    cursor: pointer;
+}
+.clickedImg .leftSide .bigImg .bPhoto{
+    width: 70%;
+
+}
+.smallImg .im {
+    width: 17.1%;
+}
+.clickedImg {
+    display: flex;
+    flex-direction: row;
+}
+.clickedImg .rightSide {
+    margin-left: -240px;
+    margin-top: 100px;
+}
+.clickedImg .rightSide input {
+    width: 50px;
+    padding: 5px;
+    font-weight: 900;
+    text-align: center;
+}
+.clickedImg .rightSide select,
+.clickedImg .rightSide input {
+    outline: none;
+}
+.clickedImg .rightSide .but {
+    cursor: pointer;
+    padding:9px;
+    outline: none;
+    border: none;
+    background-color: #088178;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+}
+.clickedImg .rightSide span {
+    line-height: 26px;
+}
+
+
+/*=============================blog Page========================*/
+.blogPage,
+.aboutPage {
+    background-image: url("D:\TheStart/banner/b19.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    color: #fff;
+    width: 100%;
+    height: 300px;
+    line-height: 5px;
+}
+.blogPage h2,
+.aboutPage h2 {
+    font-weight: 900;
+    font-size: 30px;
+}
+/*======================imges====================*/
+.mainBlog {
+    margin: 0 200px;
+}
+.mainBlog div:not(:first-of-type) {
+    margin-top: -100px;
+}
+.blogOne img {
+    width: 35%;
+    height: 300px;
+}
+.blogTitle {
+    position: relative;
+    top: -150px;
+    left: 400px;
+}
+.blogTitle p {
+    color: #6c6c6c;
+    line-height:24px;
+}
+.blogOne h1 {
+    color: #ddd;
+    font-weight: 900;
+    font-size: 50px;
+    position: relative;
+    top:55px;
+    z-index: -2;
+}
+.blogTitle a {
+    color: #1a1a1a;
+    font-size: 14px;
+}
+.blogTitle a::after {
+    content: "";
+    width: 8%;
+    height: 2px;
+    background-color: #1a1a1a;
+    position: absolute;
+    left: 150px;
+    top: 135px;
+}
+.blogTitle a:hover {
+    color: #088178;
+} 
+.blogTitle a:hover::after {
+    background-color: #088178;
+}
+/*=============================aboutPage====================*/
+.aboutPage {
+    background-image: url("D:\TheStart/about/banner.png");
+    background-size: cover;
+}
+.aboutWho {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+.aboutWho img {
+    width: 500px;
+}
+.rightPart {
+    position: relative;
+    left: 40px;
+    top: 15px;
+    line-height: 22px;
+}
+.rightPart h1 {
+    font-weight: 900;
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.rightPart p {
+    color: #6c6c6c;
+}
+.rightPart abbr {
+   text-decoration: underline;
+    color: #6c6c6c;
+}
+.downloadabout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.downloadabout .vedioApp video{
+    width: 60%;
+    width: 700px;
+    border-radius: 20px;
+}
+.aboutTitle h1 {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+}
+.aboutTitle a {
+    color: blueviolet;
+    text-decoration:underline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+.rightPart marquee {
+    background-color: #ccc;
+}
+/*==========================contact========================*/
+.mapdiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.mapdiv .mapleft {
+    position: relative;
+    left: -80px;
+    line-height: 29px;
+}
+.mapdiv .mapleft h6 {
+    color: #6c6c6c;
+}
+.mapdiv .mapleft i {
+    margin-right: 10px;
+}
+.mapdiv .themap {
+    position: relative;
+    right: -80px;
+}
+/*======================leave message===========================*/
+
+.sendMassege {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    border: 1px solid #ccc;
+    margin: 0 50px;
+    height: 660px;
+}
+.sendMassege .contactwith {
+    width: 60%;
+    position: relative;
+    top: 60px;
+}
+.sendMassege .contactwith input {
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    margin: 10px 0;
+    outline: none;
+    border: 1px solid #ccc;
+}
+.sendMassege .contactwith .b {
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 22px;
+    background-color: #088178;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.sendMassege .contactwith textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    outline: none;
+    border: 1px solid #ccc;
+    height: 150px;
+}
+.sendMassege .people {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    margin-top: -140px;
+    line-height: 24px;
+}
+.sendMassege .people img {
+    position: relative;
+    left: -105px;
+    top: 110px;
+}
+.sendMassege .people div {
+    margin: -30px;
+}
+.sendMassege .people p {
+    font-weight: 900;
+    color: #1a1a1a;
+    
+}
+.sendMassege .people span {
+    color: #6c6c6c;
+    position: relative;
+    top: -10px;
+}
+/*================Table=======================*/
+.remove {
+    margin: 0 40px;
+    line-height: 33px;
+    padding: 10px;
+}
+.remove table thead tr th{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.remove table tbody tr th {
+    padding: 10px;
+}
+.remove img {
+    width: 100px;
+    
+}
+.remove input {
+    width: 60px;
+    padding: 10px;
+}
+.remove tbody {
+    color: #6c6c6c;
+}
+.remove tbody tr th i {
+    color: rgb(96, 35, 153);
+}
+/**********************************************************/
+.tablecart {
+    margin: 0 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.tablecart .leftCart {
+    margin-top: 30px;
+}
+.tablecart .leftCart input:first-of-type {
+    outline: none;
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+.tablecart .leftCart input:last-of-type {
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: #088178;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.tablecart .rightCart {
+    border: 1px solid #ddd;
+    width: 40%;
+    height: 250px;
+    padding: 0 40px;
+}
+.tablecart .rightCart table {
+    width: 80%;
+}
+.tablecart .rightCart table {
+    border-collapse: collapse;  
+    border: 1px solid #ddd;
+}
+.tablecart .rightCart table tr td {
+    padding: 8px;
+    width: 40%;
+}
+.tablecart .rightCart input{
+    padding: 10px;
+    background-color: #088178;
+    outline: none;
+    color: #fff;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.lastrow {
+    font-weight: 900;
+}
+
+  
+  
